@@ -14,7 +14,7 @@ function App() {
   });
 
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+  const app = initializeApp(process.env.FIREBASECONFIG);
 
   const db = getFirestore(app);
 
