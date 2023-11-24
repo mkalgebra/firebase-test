@@ -12,13 +12,16 @@ function App() {
     away_points: 0,
   });
 
-  console.log("vamo", process.env.REACT_APP_FIREBASECONFIG);
-  console.log("vamo", typeof process.env.REACT_APP_FIREBASECONFIG);
+  console.log(process.env);
 
-  console.log("vamo", JSON.parse(process.env.REACT_APP_FIREBASECONFIG));
-  console.log("vamo", JSON.parse(process.env.REACT_APP_FIREBASECONFIG));
-
-  const app = initializeApp(JSON.parse(process.env.REACT_APP_FIREBASECONFIG));
+  const app = initializeApp({
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
+  });
 
   const db = getFirestore(app);
 
