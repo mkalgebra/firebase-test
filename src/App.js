@@ -6,15 +6,13 @@ import { useState, useEffect } from "react";
 function App() {
   const [data, setData] = useState([]);
   const [newData, setNewData] = useState({
-    // Update the data model with two string and two number inputs
     away_name: "",
     home_name: "",
     home_points: 0,
     away_points: 0,
   });
 
-  // Initialize Firebase
-  const app = initializeApp(process.env.FIREBASECONFIG);
+  const app = initializeApp(process.env.REACT_APP_FIREBASECONFIG);
 
   const db = getFirestore(app);
 
@@ -52,7 +50,6 @@ function App() {
     try {
       await addDoc(collection(db, "rez"), newData);
 
-      // Clear the form after successful addition
       setNewData({
         away_name: "",
         home_name: "",
