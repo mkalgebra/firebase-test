@@ -8,7 +8,7 @@ function App() {
   const [newData, setNewData] = useState({
     away_name: "",
     home_name: "",
-    home_points: 0,
+    home_points: 1,
     away_points: 0,
   });
 
