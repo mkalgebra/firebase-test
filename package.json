@@ -1,7 +1,7 @@
 {
   "name": "firebase-test",
   "version": "0.1.0",
-  "homepage": "https://mkalgebra.github.io/firebase-test/",
+  "homepage": "https://mkalgebra.github.io/firebase-test",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
