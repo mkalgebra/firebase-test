@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Debug GitHub Token
+        run: echo "Token:${{ secrets.GITHUB_TOKEN }}"
+        
       - name: Build
         run: npm run build
 
