@@ -12,7 +12,7 @@ function App() {
     away_points: 0,
   });
 
-  console.log("vamo", proces.env);
+  console.log("vamo", process.env);
 
   const app = initializeApp(process.env.REACT_APP_FIREBASECONFIG);
 
