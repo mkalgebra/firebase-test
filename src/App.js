@@ -15,7 +15,10 @@ function App() {
   console.log("vamo", process.env.REACT_APP_FIREBASECONFIG);
   console.log("vamo", typeof process.env.REACT_APP_FIREBASECONFIG);
 
-  const app = initializeApp(process.env.REACT_APP_FIREBASECONFIG);
+  console.log("vamo", JSON.parse(process.env.REACT_APP_FIREBASECONFIG));
+  console.log("vamo", JSON.parse(process.env.REACT_APP_FIREBASECONFIG));
+
+  const app = initializeApp(JSON.parse(process.env.REACT_APP_FIREBASECONFIG));
 
   const db = getFirestore(app);
 
