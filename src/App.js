@@ -33,7 +33,7 @@ function App() {
     };
 
     fetchData();
-  }, []);
+  }, [db]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
