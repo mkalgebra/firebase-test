@@ -20,7 +20,7 @@ jobs:
         npm install
         npm run-script build
       env:
-        REACT_APP_FIREBASECONFG: ${{ secrets.FIREBASECONFIG }}
+        REACT_APP_FIREBASECONFIG: ${{ secrets.FIREBASECONFIG }}
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
